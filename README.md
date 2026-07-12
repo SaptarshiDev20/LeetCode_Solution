@@ -31,6 +31,7 @@ Here is a list of the problems solved so far in this repository:
 | 1 | Two Sum | [View Solution](./1-two-sum/) | 🟢 Easy |
 | 4 | Median of Two Sorted Arrays | [View Solution](./4-median-of-two-sorted-arrays/) | 🔴 Hard |
 | 5 | Longest Palindromic Substring | [View Solution](./5-longest-palindromic-substring/) | 🟡 Medium |
+| 10 | Regular Expression Matching | [View Solution](./10-regular-expression-matching/) | 🔴 Hard |
 | 11 | Container With Most Water | [View Solution](./11-container-with-most-water/) | 🟡 Medium |
 | 14 | Longest Common Prefix | [View Solution](./14-longest-common-prefix/) | 🟢 Easy |
 | 26 | Remove Duplicates from Sorted Array | [View Solution](./26-remove-duplicates-from-sorted-array/) | 🟢 Easy |
