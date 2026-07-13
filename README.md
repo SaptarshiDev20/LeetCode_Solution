@@ -34,6 +34,7 @@ Here is a list of the problems solved so far in this repository:
 | 10 | Regular Expression Matching | [View Solution](./10-regular-expression-matching/) | 🔴 Hard |
 | 11 | Container With Most Water | [View Solution](./11-container-with-most-water/) | 🟡 Medium |
 | 14 | Longest Common Prefix | [View Solution](./14-longest-common-prefix/) | 🟢 Easy |
+| 22 | Generate Parentheses | [View Solution](./22-generate-parentheses/) | 🟡 Medium |
 | 26 | Remove Duplicates from Sorted Array | [View Solution](./26-remove-duplicates-from-sorted-array/) | 🟢 Easy |
 | 27 | Remove Element | [View Solution](./27-remove-element/) | 🟢 Easy |
 | 35 | Search Insert Position | [View Solution](./35-search-insert-position/) | 🟢 Easy |
