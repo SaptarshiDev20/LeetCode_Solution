@@ -38,6 +38,7 @@ Here is a list of the problems solved so far in this repository:
 | 22 | Generate Parentheses | [View Solution](./22-generate-parentheses/) | 🟡 Medium |
 | 26 | Remove Duplicates From Sorted Array | [View Solution](./26-remove-duplicates-from-sorted-array/) | 🟢 Easy |
 | 27 | Remove Element | [View Solution](./27-remove-element/) | 🟢 Easy |
+| 32 | Longest Valid Parentheses | [View Solution](./32-longest-valid-parentheses/) | 🔴 Hard |
 | 35 | Search Insert Position | [View Solution](./35-search-insert-position/) | 🟢 Easy |
 | 66 | Plus One | [View Solution](./66-plus-one/) | 🟢 Easy |
 | 88 | Merge Sorted Array | [View Solution](./88-merge-sorted-array/) | 🟢 Easy |
