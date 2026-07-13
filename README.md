@@ -30,6 +30,25 @@ Here is a list of the problems solved so far in this repository:
 | # | Problem Name | Solution Link | Difficulty |
 |---|---|---|---|
 | 1 | Two Sum | [View Solution](./1-two-sum/) | 🟢 Easy |
+| 4 | Median Of Two Sorted Arrays | [View Solution](./4-median-of-two-sorted-arrays/) | 🔴 Hard |
+| 5 | Longest Palindromic Substring | [View Solution](./5-longest-palindromic-substring/) | 🟡 Medium |
+| 10 | Regular Expression Matching | [View Solution](./10-regular-expression-matching/) | 🔴 Hard |
+| 11 | Container With Most Water | [View Solution](./11-container-with-most-water/) | 🟡 Medium |
+| 14 | Longest Common Prefix | [View Solution](./14-longest-common-prefix/) | 🟢 Easy |
+| 22 | Generate Parentheses | [View Solution](./22-generate-parentheses/) | 🟡 Medium |
+| 26 | Remove Duplicates From Sorted Array | [View Solution](./26-remove-duplicates-from-sorted-array/) | 🟢 Easy |
+| 27 | Remove Element | [View Solution](./27-remove-element/) | 🟢 Easy |
+| 35 | Search Insert Position | [View Solution](./35-search-insert-position/) | 🟢 Easy |
+| 66 | Plus One | [View Solution](./66-plus-one/) | 🟢 Easy |
+| 88 | Merge Sorted Array | [View Solution](./88-merge-sorted-array/) | 🟢 Easy |
+| 108 | Convert Sorted Array To Binary Search Tree | [View Solution](./108-convert-sorted-array-to-binary-search-tree/) | 🟢 Easy |
+| 118 | Pascals Triangle | [View Solution](./118-pascals-triangle/) | 🟢 Easy |
+| 119 | Pascals Triangle Ii | [View Solution](./119-pascals-triangle-ii/) | 🟢 Easy |
+| 121 | Best Time To Buy And Sell Stock | [View Solution](./121-best-time-to-buy-and-sell-stock/) | 🟢 Easy |
+| 1212 | Sequential Digits | [View Solution](./1212-sequential-digits/) | 🟡 Medium |
+| 1256 | Rank Transform Of An Array | [View Solution](./1256-rank-transform-of-an-array/) | 🟢 Easy |
+| 2793 | Count The Number Of Complete Components | [View Solution](./2793-count-the-number-of-complete-components/) | 🟡 Medium |
+
 <!-- table-end -->
 
 > 💡 *Note: This table is auto-generated.*
