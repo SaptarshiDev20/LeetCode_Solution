@@ -46,6 +46,7 @@ Here is a list of the problems solved so far in this repository:
 | 118 | Pascals Triangle | [View Solution](./118-pascals-triangle/) | 🟢 Easy |
 | 119 | Pascals Triangle Ii | [View Solution](./119-pascals-triangle-ii/) | 🟢 Easy |
 | 121 | Best Time To Buy And Sell Stock | [View Solution](./121-best-time-to-buy-and-sell-stock/) | 🟢 Easy |
+| 514 | Freedom Trail | [View Solution](./514-freedom-trail/) | 🔴 Hard |
 | 1212 | Sequential Digits | [View Solution](./1212-sequential-digits/) | 🟡 Medium |
 | 1256 | Rank Transform Of An Array | [View Solution](./1256-rank-transform-of-an-array/) | 🟢 Easy |
 | 2793 | Count The Number Of Complete Components | [View Solution](./2793-count-the-number-of-complete-components/) | 🟡 Medium |
