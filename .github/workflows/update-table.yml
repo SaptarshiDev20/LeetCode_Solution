@@ -1,0 +1,33 @@
+name: Update LeetCode README Table
+
+on:
+  push:
+    branches:
+      - main  # Or 'master', depending on your default branch name
+    paths-ignore:
+      - 'README.md' # Prevents an infinite loop of commits
+
+permissions:
+  contents: write # Grants the action permission to push code back to the repo
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Python Script
+        run: python update_readme.py
+
+      - name: Commit and Push Changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "docs: auto-update LeetCode problem index"
+          file_pattern: "README.md"
