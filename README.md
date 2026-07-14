@@ -50,6 +50,7 @@ Here is a list of the problems solved so far in this repository:
 | 1212 | Sequential Digits | [View Solution](./1212-sequential-digits/) | 🟡 Medium |
 | 1256 | Rank Transform Of An Array | [View Solution](./1256-rank-transform-of-an-array/) | 🟢 Easy |
 | 2793 | Count The Number Of Complete Components | [View Solution](./2793-count-the-number-of-complete-components/) | 🟡 Medium |
+| 3608 | Find The Number Of Subsequences With Equal Gcd | [View Solution](./3608-find-the-number-of-subsequences-with-equal-gcd/) | 🔴 Hard |
 
 <!-- table-end -->
 
