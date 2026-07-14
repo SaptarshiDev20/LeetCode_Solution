@@ -1,53 +1,87 @@
 class Solution {
-    public int subsequencePairCount(int[] nums) {
-        int MOD = 1000000007;
-        int maxVal = 0;
-        for (int x : nums) {
-            maxVal = Math.max(maxVal, x);
+    private static final int MOD = 1_000_000_007;
+    private static final int MX = 201;
+
+    private static final int[][] lcms = new int[MX][MX];
+    private static final int[] pow2 = new int[MX];
+    private static final int[] pow3 = new int[MX];
+    private static final int[] mu = new int[MX];
+    private static boolean initialized = false;
+
+    public Solution() {
+        if (initialized) {
+            return;
         }
-        
-        int[][] dp = new int[maxVal + 1][maxVal + 1];
-        dp[0][0] = 1;
-        
-        for (int x : nums) {
-            int[][] nextDp = new int[maxVal + 1][maxVal + 1];
-            
-            for (int i = 0; i <= maxVal; i++) {
-                for (int j = 0; j <= maxVal; j++) {
-                    nextDp[i][j] = dp[i][j];
-                }
+        initialized = true;
+
+        for (int i = 1; i < MX; i++) {
+            for (int j = 1; j < MX; j++) {
+                lcms[i][j] = lcm(i, j);
             }
-            
-            for (int g1 = 0; g1 <= maxVal; g1++) {
-                for (int g2 = 0; g2 <= maxVal; g2++) {
-                    if (dp[g1][g2] > 0) {
-                        int v = dp[g1][g2];
-                        
-                        int ng1 = (g1 == 0) ? x : gcd(g1, x);
-                        nextDp[ng1][g2] = (nextDp[ng1][g2] + v) % MOD;
-                        
-                        int ng2 = (g2 == 0) ? x : gcd(g2, x);
-                        nextDp[g1][ng2] = (nextDp[g1][ng2] + v) % MOD;
-                    }
-                }
+        }
+
+        pow2[0] = pow3[0] = 1;
+        for (int i = 1; i < MX; i++) {
+            pow2[i] = pow2[i - 1] * 2 % MOD;
+            pow3[i] = (int) ((long) pow3[i - 1] * 3 % MOD);
+        }
+
+        mu[1] = 1;
+        for (int i = 1; i < MX; i++) {
+            for (int j = i * 2; j < MX; j += i) {
+                mu[j] -= mu[i];
             }
-            dp = nextDp;
         }
-        
-        int ans = 0;
-        for (int g = 1; g <= maxVal; g++) {
-            ans = (ans + dp[g][g]) % MOD;
-        }
-        
-        return ans;
     }
-    
-    private int gcd(int a, int b) {
-        while (b != 0) {
-            int temp = b;
-            b = a % b;
-            a = temp;
+
+    public int subsequencePairCount(int[] nums) {
+        int m = 0;
+        for (int x : nums) {
+            m = Math.max(m, x);
         }
-        return a;
+
+        int[] cnt = new int[m + 1];
+        for (int x : nums) {
+            cnt[x]++;
+        }
+        for (int i = 1; i <= m; i++) {
+            for (int j = i * 2; j <= m; j += i) {
+                cnt[i] += cnt[j]; 
+            }
+        }
+
+        int[][] f = new int[m + 1][m + 1];
+        for (int g1 = 1; g1 <= m; g1++) {
+            for (int g2 = 1; g2 <= m; g2++) {
+                int l = lcms[g1][g2];
+                int c = l <= m ? cnt[l] : 0;
+                int c1 = cnt[g1];
+                int c2 = cnt[g2];
+                f[g1][g2] = (int) (((long) pow3[c] * pow2[c1 + c2 - c * 2] - pow2[c1] - pow2[c2] + 1) % MOD);
+            }
+        }
+
+        long ans = 0;
+        for (int i = 1; i <= m; i++) {
+            for (int j = 1; j <= m / i; j++) {
+                for (int k = 1; k <= m / i; k++) {
+                    ans += mu[j] * mu[k] * f[j * i][k * i];
+                }
+            }
+        }
+        return (int) ((ans % MOD + MOD) % MOD);
+    }
+
+    private static int gcd(int a, int b) {
+        while (a != 0) {
+            int tmp = a;
+            a = b % a;
+            b = tmp;
+        }
+        return b;
+    }
+
+    private static int lcm(int a, int b) {
+        return a / gcd(a, b) * b;
     }
 }
