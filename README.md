@@ -30,6 +30,7 @@ Here is a list of the problems solved so far in this repository:
 | # | Problem Name | Solution Link | Difficulty |
 |---|---|---|---|
 | 1 | Two Sum | [View Solution](./1-two-sum/) | 🟢 Easy |
+| 2 | Add Two Numbers | [View Solution](./2-add-two-numbers/) | 🟡 Medium |
 | 4 | Median Of Two Sorted Arrays | [View Solution](./4-median-of-two-sorted-arrays/) | 🔴 Hard |
 | 5 | Longest Palindromic Substring | [View Solution](./5-longest-palindromic-substring/) | 🟡 Medium |
 | 10 | Regular Expression Matching | [View Solution](./10-regular-expression-matching/) | 🔴 Hard |
