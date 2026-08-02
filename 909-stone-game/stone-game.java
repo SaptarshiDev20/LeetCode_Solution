@@ -1,0 +1,23 @@
+class Solution {
+    public boolean stoneGame(int[] piles) {
+        int n = piles.length;
+        int[][] dp = new int[n][n];
+        
+        for (int i = 0; i < n; i++) {
+            dp[i][i] = piles[i];
+        }
+        
+        for (int length = 2; length <= n; length++) {
+            for (int i = 0; i < n - length + 1; i++) {
+                int j = i + length - 1;
+                
+                int pickStart = piles[i] - dp[i + 1][j];
+                int pickEnd = piles[j] - dp[i][j - 1];
+                
+                dp[i][j] = Math.max(pickStart, pickEnd);
+            }
+        }
+        
+        return dp[0][n - 1] > 0;
+    }
+}
